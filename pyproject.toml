@@ -1,0 +1,22 @@
+[project]
+name = "can-bus-ids"
+version = "0.1.0"
+description = "Baseline-driven intrusion detection for CAN bus captures"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Emil Eminov" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+canids = "canids.cli:main"
+
+[tool.setuptools]
+packages = ["canids"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
